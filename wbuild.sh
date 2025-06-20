@@ -7,8 +7,8 @@ EMFLAGS="-s USE_GLFW=3 --shell-file shell.html -DPLATFORM_WEB"
 
 # Paths
 INCLUDE_DIR="include/"
-LIB_DIR="llib/"
+LIB_DIR="lib"
 OUTPUT="index.html"
 
 # Build command
-$CC -o $OUTPUT src/main.cpp $LIB_DIR/libraylib.a $CFLAGS -I. -I $INCLUDE_DIR -L. -L $LIB_DIR $EMFLAGS
+$CC -o $OUTPUT src/main.cpp src/Game/Game.cpp src/Entity/Entity.cpp $LIB_DIR/libraylib.web.a $CFLAGS -I. -I $INCLUDE_DIR -L. -L $LIB_DIR $EMFLAGS
